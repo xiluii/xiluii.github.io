@@ -1,101 +1,147 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# Wu Luchen
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
+你好，我是 **Wu Luchen**，哈尔滨工程大学计算机科学与技术专业本科二年级学生。我的兴趣集中在人工智能与大语言模型，目前在 **Yu Zhiwen 教授的实验室**参与研究，主要关注 **LLM 推理加速**。
 
-# Getting Started
+- **2025.9**：进入哈尔滨工程大学学习。
+- **2025–2026**：获得 Xiaomi Scholarship（计算机学院前 2 名）。
+- **2026.8**：参加 NTU Artificial Intelligence Special Camp。
+- **2026.5 至今**：担任 HEU AIGC Club 主席，参与组织 Red Leaf Festival、Sci-Tech Innovation Carnival 等校园活动。
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Edit site-wide configuration in `_config.yml` and double check that the `url` is the one that you just selected in the previous step and that `repository` reflects the correct path for your repository.
-1. Add your site content, upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+[个人主页](https://xiluii.github.io/) · [GitHub](https://github.com/xiluii) · [ORCID](https://orcid.org/0009-0007-5242-5261) · [Email](mailto:xiluii@hrbeu.edu.cn)
 
-See more info at https://academicpages.github.io/
+## 个人信息在哪里修改
 
-### Additional Tutorials
+这个仓库用于维护我的个人主页。站点基于 Jekyll 和 Academic Pages，目前只保留首页与 404 错误页，使用浅色模式和 Times New Roman 字体，已移除其他分页和底部页脚卡片。
 
-Additional tutorials for working with the Academic Pages template can be found at the following sites:
-- https://jayrobwilliams.com/posts/2020/06/academic-website/
+| 要更新的内容 | 文件 | 修改位置 |
+| --- | --- | --- |
+| 首页自我介绍、研究方向、教育经历、奖学金、交流活动、社团经历 | [`_pages/about.md`](_pages/about.md) | 文件顶部的配置之后，直接编辑 Markdown 正文 |
+| 首页大标题 | [`_pages/about.md`](_pages/about.md) | 顶部的 `title` |
+| 顶部站点名称 | [`_config.yml`](_config.yml) | 顶层的 `title` |
+| 个人姓名与网站简介 | [`_config.yml`](_config.yml) | 顶层的 `name`、`description`，以及 `author.name` |
+| 侧栏所在地、邮箱、GitHub、ORCID 等链接 | [`_config.yml`](_config.yml) | `author` 下的 `location`、`email`、`github`、`orcid` 等字段 |
+| 头像 | [`images/头像.png`](images/头像.png) 与 [`_config.yml`](_config.yml) | 替换图片，或修改 `author.avatar` 指向的新文件名 |
+| 简历、论文等附件 | [`files/`](files/) | 添加文件，再在首页正文中插入下载链接 |
+| 仓库首页的自我介绍与维护说明 | [`README.md`](README.md) | 本文件；与网站正文分别维护 |
 
-## Running locally
+### 修改首页正文
 
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+打开 `_pages/about.md`，保留文件最前面的配置块与 `permalink: /`，在配置块之后修改介绍和各个栏目。新增一条经历时，可沿用现有格式：
 
-1. Clone the repository and made updates as detailed above.
+```markdown
+## Educations
 
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distributions and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try running `sudo apt install ruby-dev ruby-bundler nodejs` again.
-
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
-
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stopping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
-
-```bash
-chmod -R 777 .
-docker compose up
+- **[2025.9]** Be admitted to Harbin Engineering University
 ```
 
-You should now be able to access the website from `localhost:4000`.
+首页支持普通 Markdown：`##` 表示栏目标题，`-` 表示列表，`**文字**` 表示加粗，`[文字](链接)` 表示链接。新增栏目也直接写在此文件中。
 
-### Using the DevContainer in VS Code
+### 修改侧栏信息和头像
 
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+打开 `_config.yml`，在 `author:` 下修改对应字段。`github` 填用户名，`orcid` 等链接字段填完整 URL；不需要展示的字段可以留空。YAML 使用空格缩进，修改时保持原有层级。
 
-# Maintenance
+头像的本地文件放在 `images/` 中。目前实际使用的是 `images/头像.png`，可以用新图片替换这个文件；如果改用另一个文件名，需要同时修改：
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+```yaml
+author:
+  avatar: "profile.png"
+```
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii), and additional maintainers would be welcome.
+上面的示例对应 `images/profile.png`，配置中只填写文件名。仅替换 `files/头像.png` 不会更新侧栏头像。
 
-## Bugfixes and enhancements
+站点地址配置目前为 `url: https://xiluii.github.io`、`repository: xiluii/xiluii.github.io`，`baseurl` 留空。日常更新个人信息时保留这些值。
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of the template to your fork as well.
+### 添加附件
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize, although [rebasing](https://git-scm.com/docs/git-rebase) the changes from this template will work along with manually [cherry picking](https://git-scm.com/docs/git-cherry-pick) the relevant commits. If you are not comfortable with the Git command line, you can save your various `.yml` configuration files and Markdown files, delete the repository, and fork it again. 
+例如，将简历上传为 `files/cv.pdf`，再在 `_pages/about.md` 中添加：
 
----
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
+```markdown
+[Download my CV](/files/cv.pdf)
+```
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+更新姓名、身份、研究方向或联系方式时，也同步修改 README 开头的介绍和链接，保持网站与仓库说明一致。
+
+## 更新和发布流程
+
+### 方法一：直接在 GitHub 上修改
+
+适合只更新文字、联系方式或少量图片的情况，无需安装本地开发环境。
+
+1. 打开 [仓库](https://github.com/xiluii/xiluii.github.io)，确认当前分支为 `master`。
+2. 找到需要修改的文件，例如 `_pages/about.md` 或 `_config.yml`，点击编辑按钮并修改内容；图片和附件可通过 **Add file → Upload files** 上传。
+3. 查看修改内容，填写提交说明并提交到 `master`。如果同一次更新涉及多个文件，逐个完成并保持内容一致。
+4. 打开 [Actions](https://github.com/xiluii/xiluii.github.io/actions)，等待 **pages build and deployment** 显示成功。
+5. 打开 [个人主页](https://xiluii.github.io/)，检查文字、头像和链接。若仍显示旧内容，强制刷新页面。
+
+### 方法二：本地修改后推送
+
+**1. 获取最新版本。** 在仓库目录中运行：
+
+```bash
+git status
+git pull --ff-only
+```
+
+先确认没有未处理的本地修改，再拉取远程版本。如果尚未下载仓库，可以先运行：
+
+```bash
+git clone git@github.com:xiluii/xiluii.github.io.git
+cd xiluii.github.io
+```
+
+**2. 编辑文件。** 根据前面的表格更新首页正文、侧栏信息、头像或附件；涉及自我介绍时同步更新 README。
+
+**3. 本地预览与构建检查。** 仅修改 README 时可以跳过此步骤。环境需要 Ruby、Bundler；本项目使用 Ruby 3.2 进行过构建验证。Windows 可以在 WSL 中运行以下命令。首次使用时，在仓库目录安装依赖：
+
+```bash
+bundle config set --local path vendor/bundle
+bundle install
+```
+
+启动预览：
+
+```bash
+bundle exec jekyll serve --config _config.yml,_config_docker.yml --host 127.0.0.1
+```
+
+打开 [本地预览](http://127.0.0.1:4000/)，检查首页和手机宽度下的布局。这里同时加载 `_config_docker.yml`，使预览使用本地资源。修改 `_config.yml` 后，需要停止并重新启动服务。
+
+发布前运行一次构建检查：
+
+```bash
+bundle exec jekyll build --strict_front_matter
+```
+
+只更新文字、图片或 SCSS 时，不需要重建 JavaScript；如果修改了 `assets/js/_main.js`、`assets/js/theme.js` 或导航脚本，则先运行以下命令，并将生成的 `assets/js/main.min.js` 一并提交：
+
+```bash
+npm install
+npm run build:js
+```
+
+**4. 检查改动、提交并推送。** 下面以更新介绍和配置为例，只暂存本次实际修改的文件：
+
+```bash
+git diff
+git add _pages/about.md _config.yml README.md
+git diff --cached
+git diff --cached --check
+git commit -m "Update personal information"
+git push
+```
+
+如果更新了头像、附件或样式，提交前也需要用 `git add` 暂存相应文件，例如 `git add "images/头像.png"`。`_site/`、`node_modules/`、`vendor/` 和本地缓存已被忽略，不需要提交。
+
+本地当前分支为 `master`，已经设置了远程跟踪，因此使用 `git pull --ff-only` 和 `git push` 即可。这份本地检出的远程名称为 `master`，通过 `git clone` 新下载的仓库通常为 `origin`；可用 `git remote -v` 查看，更新流程不依赖固定的远程名称。
+
+**5. 确认线上发布。** 等待 [Actions](https://github.com/xiluii/xiluii.github.io/actions) 中本次提交的 **pages build and deployment** 成功，再访问 [个人主页](https://xiluii.github.io/) 检查结果。推送成功表示代码已上传，发布成功后网站才会显示新版。
+
+## 维护说明
+
+- 首页与 README 的自我介绍是两份独立内容，更新个人信息时需要同步维护。
+- 当前站点保持单页结构，新增经历直接写入 `_pages/about.md`。
+- 字体设置位于 `_sass/_themes.scss`，页面布局位于 `_layouts/`，主样式入口为 `assets/css/main.scss`。
+- README 通过 `_config.yml` 排除在网站输出之外，仅作为 GitHub 仓库说明展示。
+- 如果构建失败，打开 Actions 中失败的任务查看日志，修正对应文件后重新提交。
+
+本网站基于 [Academic Pages](https://github.com/academicpages/academicpages.github.io) 模板，保留原项目的 [LICENSE](LICENSE)。
