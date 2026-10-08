@@ -2,9 +2,6 @@
 permalink: /
 title: "Luchen Wu - Homepage"
 author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
 ---
 
 Nice to meet you! I am Wu Luchen, Second-year undergraduate in Computer Science and Technology at Harbin Engineering University.
