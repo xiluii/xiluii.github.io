@@ -15,6 +15,7 @@ I am deeply interested in AI and Large Language Models. Currently, I am an under
 
 ## 🏅 Scholarships & Honors
 
+- **[2026.06]** First Place， in the Corn Plant Recognition Track at [CCF SAC-2026](https://conf.ccf.org.cn/web/api/m1499008310966358016177743303156.action).
 - **[2025 - 2026]** Xiaomi Scholarship (Top 2 in the College of Computer Science).
 
 ## 🌏 Experience
